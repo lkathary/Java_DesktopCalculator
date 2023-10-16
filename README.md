@@ -13,7 +13,7 @@ Java Web-приложение калькулятора для вычислени
 Please add "VM-option" to Run Configuration of your IDE (IDEA, Eclipse):\
 При запуске приложения из под IDE (IDEA, Eclipse) добавьте в качестве "VM-option":
 
-#### -Djava.library.path="$PROJECT_DIR$/src/main/java/ru/school21/webcalculator/models"
+#### -Djava.library.path="$PROJECT_DIR$/src/main/java/com/example/calculator/models"
 
 ***
 

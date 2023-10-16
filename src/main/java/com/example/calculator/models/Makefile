@@ -4,8 +4,6 @@
 #	g++ -g -shared -fpic -I"/usr/lib/jvm/java-11-openjdk-amd64/include" -I"/usr/lib/jvm/java-11-openjdk-amd64/include/linux" $(FILE_MODEL).cpp -o lib$(FILE_MODEL).so
 #	'dylib' ext for MAC OS
 
-#	-Djava.library.path="C:/Users/Alex/calc_java/APJ2_SmartCalc_v3.0_Desktop_Java-1/src/calculator/src/main/java/com/example/calculator/models"
-
 .PHONY: header jni
 CXX=g++
 CAR=ar
@@ -36,7 +34,6 @@ ifeq ($(OS), Linux)
 	$(CXX) $(FLAGS) -g -shared -fpic  -I"${JAVA_HOME}/include" -I"${JAVA_HOME}/include/linux" $(FILE_MODEL).cpp -o lib$(FILE_MODEL).so
 else
 	$(CXX) -c $(FLAGS) -I"${JAVA_HOME}\include" -I"${JAVA_HOME}\include\win32" $(FILE_MODEL).cpp -o $(FILE_MODEL).o
-#	$(CXX) -shared -o $(FILE_MODEL).dll $(FILE_MODEL).o -Wl,--add-stdcall-alias -static-libgcc -static-libstdc++ -Bstatic -lstdc++ -lpthread
 	$(CXX) -shared -o $(FILE_MODEL).dll $(FILE_MODEL).o -Wl,--add-stdcall-alias -static
 endif
 
