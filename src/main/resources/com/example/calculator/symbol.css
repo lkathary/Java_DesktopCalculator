@@ -1,0 +1,6 @@
+.default-color0.chart-symbol { /* hollow circle */
+    -fx-background-color: #CC0000, white;
+    -fx-background-insets: 0, 1.5;
+    -fx-background-radius: 1.5px;
+    -fx-padding: 1.5px;
+}
