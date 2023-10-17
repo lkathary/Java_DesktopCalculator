@@ -25,3 +25,11 @@ endif
 
 run: build
 	java -Djava.library.path=$(PATH_LIB) -jar target/calculator-1.0-SNAPSHOT.jar
+
+
+test:
+ifeq ($(OS), Linux)
+	./mvnw test
+else
+	mvnw test
+endif
